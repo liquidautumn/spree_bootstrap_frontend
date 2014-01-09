@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'bootstrap-sass',      '~> 3.0.3.0'
   s.add_runtime_dependency 'kaminari-bootstrap',  '~> 3.0.1'
-  s.add_runtime_dependency 'spree_core',          '~> 2-1-stable'
+  s.add_runtime_dependency 'spree_core',          '~> 2.1.0'
 
   s.add_development_dependency 'capybara',        '~> 2.1'
   s.add_development_dependency 'coffee-rails'

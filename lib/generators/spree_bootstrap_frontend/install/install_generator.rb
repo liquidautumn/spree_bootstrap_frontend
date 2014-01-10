@@ -11,10 +11,10 @@ module SpreeBootstrapFrontend
       end
 
       def add_stylesheets
-        copy_file 'stylesheets/spree_bootstrap_frontend.css.scss',
-                  'app/assets/stylesheets/spree/frontend/spree_bootstrap_frontend.css.scss'
-        inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_bootstrap_frontend\n", :before => /\*\//, :verbose => true
-        inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_bootstrap_frontend\n", :before => /\*\//, :verbose => true
+        copy_file 'stylesheets/spree_bootstrap_frontend.css.scss', 'app/assets/stylesheets/store/spree_bootstrap_frontend.css.scss'
+
+        # inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_bootstrap_frontend\n", :before => /\*\//, :verbose => true
+        # inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_bootstrap_frontend\n", :before => /\*\//, :verbose => true
       end
 
       def add_migrations

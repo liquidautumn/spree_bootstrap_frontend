@@ -118,7 +118,7 @@
     <% order.shipments.group_by { |s| s.shipping_method.name }.each do |name, shipments| %>
       <tr class="total" data-hook='shipment-row'>
         <td colspan="4" align="right" class="text-muted"><%= Spree.t(:shipping) %>: <strong><%= name %></strong></td>
-        <td class="total"><span><%= Spree::Money.new(shipments.sum(&:discounted_cost)).to_html %></span></td>
+        <td class="total"><span><%= Spree::Money.new(shipments.sum(&:cost)).to_html %></span></td>
       </tr>
     <% end %>
   </tfoot>

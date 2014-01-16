@@ -31,7 +31,7 @@
 
     <tr data-hook="shipping_total">
       <td><%= Spree.t(:shipping_total) %></td>
-      <td><%= Spree::Money.new(@order.shipment_total).to_html %></td>
+      <td><%= Spree::Money.new(@order.ship_total).to_html %></td>
     </tr>
 
     <% if order.adjustments.eligible.exists? %>
